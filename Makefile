@@ -10,3 +10,6 @@ ps:
 # Make a test DVI
 dvi:
 	latex test/example.tex
+
+clean:
+	$(rm example.*)
