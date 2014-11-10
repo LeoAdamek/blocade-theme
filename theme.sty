@@ -1,0 +1,88 @@
+%%
+%% Author: Leo Adamek <leo@adamek.me>
+%% Licensed under Apache 2.0
+%% Rights to this document are CC-BY-SA Leo Adamek
+%%
+%% Docublock:
+%%
+%% A Simple, Customizable LaTeX theme
+%% Designed to work in all formats
+%% in all format sizes.
+%%
+%%
+%% Requires:
+%%
+%% - LaTeX2e
+%% - geometry
+%% - needspace
+%% - xcolor
+%% - hyperref
+%% - fancyhdf
+%% - tikz
+%%
+%% These are be available within Texlive.
+%%
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{theme}
+
+%%
+%% Packages
+%%
+
+\RequirePackage{geometry}
+\RequirePackage{needspace}
+\RequirePackage[svgnames,usenames]{xcolor}
+
+% Links will be colored
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true}
+
+\RequirePackage{fancyhdr}
+
+\RequirePackage{tikz}
+\usetikzlibrary{
+  calc,
+  decorations.pathmorphing,
+  fadings,
+  shadows,
+  shapes.geometric,
+  shapes.misc,
+}
+
+\RequirePackage[sc]{mathpazo}
+\linespread{1.2}
+\RequirePackage[T1]{fontenc}
+
+%%
+%% Options
+%%
+
+\ExecuteOptions{}
+\ProcessOptions\relax
+
+
+%%
+%% Configuration
+%%
+
+% \renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{0.5\baselineskip}
+
+%% Colors
+\definecolor{banner}{HTML}{2244FF}
+\colorlet{toctitle}{DarkGray!50!black}
+
+\colorlet{titlebg}{banner}
+\colorlet{titlefg}{White}
+
+%%
+%% Header & Footer
+%%
+
+\tikzstyle{footerblock}=[fill=banner, text=white,  circle]
+
+
+\endinput
+
